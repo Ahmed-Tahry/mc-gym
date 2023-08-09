@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-family: "Inter", sans-serif;
+  --color-grey: #222222;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: clamp(100%, 1vw, 300%);
+}
+body {
+  background-color: black;
+}
+.section {
+  margin: 2rem 0rem;
+}
+.slide-top {
+  animation: slide-top 0.5s ease;
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.img {
+  object-fit: contain;
+}
+h1 {
+  font-size: clamp(40px, 9vw, 500%);
+}
+hr {
+  height: 2px;
+  border-width: 0;
+  background-color: black;
+  width: 100%;
+}
+.hovering:hover .hovered {
+  color: black;
+  background-color: #faff00;
+}
+.hovering_1:hover .hovered_1 {
+  border-color: #faff00;
+}
+.active {
+  background-color: #faff00;
+}
